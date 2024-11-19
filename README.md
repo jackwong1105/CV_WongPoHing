@@ -1,2 +1,2 @@
-# Curriculum-Vitae
-Curriculum Vitae of Po Hing Wong 
+# CV
+CV of Po Hing Wong 
