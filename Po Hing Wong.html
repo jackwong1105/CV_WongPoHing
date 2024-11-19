@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Po Hing Wong - CV</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+        .contact-info {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li {
+            background-color: #3498db;
+            color: white;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 3px;
+        }
+        .hidden {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Po Hing Wong</h1>
+            <p class="hidden">Software Developer</p>
+        </header>
+
+        <div class="grid">
+            <div class="contact-info">
+                <section class="section" id="contact">
+                    <h2>Contact Information</h2>
+                    <p>📧 <a href="mailto:pohingwong1105@gmail.com">pohingwong1105@gmail.com</a></p>
+                    <p>📞 (852) 5571 5066</p>
+                    <p class="hidden">🔗 <a href="https://www.linkedin.com/in/pohingwong/" target="_blank">linkedin.com/in/pohingwong</a></p>
+                    <p>🔗<a href="https://github.com/jackwong1105" target="_blank">github.com/jackwong1105</a></p>
+                </section>
+
+                <section class="section skills" id="skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>R</li>
+                        <li>SQL</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="main-content">
+                <section class="section" id="education">
+                    <h2 style="color: #0066cc;">Education History</h2>
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <p>The Chinese University of Hong Kong, New Asia College, 2022-present</p>
+                    <h3>Associate Degree of Engineering in Computer Science</h3>
+                    <p>HKU School of Professional and Continuing Education, 2020 - 2022</p>
+                    <p><em>Graduate with Distinction</em></p>
+                    <h3>Associate Degree of Science</h3>
+                    <p>HKU School of Professional and Continuing Education, 2019 - 2020</p>
+                    <h3>High School Diploma</h3>
+                    <p>CHENG CHEK CHEE SECONDARY SCHOOL, 2013 - 2019</p>
+
+                <div class="project">
+                    <h2 style="color: #cc3300;">Projects</h2>
+
+                    <h3>Notakto</h3>
+                    <p class="project-date">2023/02 - 2023/04</p>
+                    <p class="project-description">Game played by 2 players on multiple a 3x3 games board</p>
+                    <p>🔗 <a href="https://github.com/jackwong1105/Notakto" target="_blank">GitHub Repository</a></p>
+                    <ul class="project-details">
+                        <li> Using C to construct two Game Board </li>
+                        <li> Divide two mode : Human VS Human, Human VS Computer Player</li>
+                    </ul>
+
+                    <h3>Point of Sale System for Restaurant</h3>
+                    <p class="project-date">2021/09 - 2022/04</p>
+                    <p class="project-description">Final Year Group project on HKU SPACE</p>
+                    <p>🔗 <a href="https://github.com/JeffLiHK/restaurant_pos" target="_blank">GitHub Repository</a></p>
+                    <ul class="project-details">
+                        <li>Doing Front-end development using HTML, CSS, JavaScript and Echarts</li>
+                        <li>IntelliJ IDEA to be IDE to develop the project</li>
+                        <li>Maven to manager the project and dependency setting</li>
+                        <li>Draw.io to design different diagrams</li>
+                    </ul>
+
+                    <h3>Personal Portfolio</h3>
+                    <p class="project-date">2021/10 - 2021/11</p>
+                    <p>🔗 <a href="https://github.com/jackwong1105/Personal-Portfolio-of-Internet-Programming-Webpage-Programming-Design-Assignment-01-" target="_blank">GitHub Repository</a></p>
+                    <ul class="project-details">
+                        <li>Use HTML, CSS, and JavaScript to create a website</li>
+                        <li>with variety of text, graphics, sound and animations</li>
+                        <li>consist three pages: Home page(index.html), Personal portfolio page(portfolio.html) and Hobbies page (hobbies.html)</li>
+                    </ul>
+
+                    <h3>Business Website of Baby Product</h3>
+                    <p class="project-date">2021/11 - 2021/12</p>
+                    <p>🔗 <a href="https://github.com/jackwong1105/Business-Website-of-Baby-Product" target="_blank">GitHub Repository</a></p>
+                    <ul class="project-details">
+                        <li>Use DHTML (HTML / CSS /JavaScript) to create a Business Website of Baby Product</li>
+                        <li>with Top Navigational Bar, Live Clock</li>
+                        <li>consist two games: Tower of Hanoi and Play Snake Game</li>
+                    </ul>
+
+                    <h3>Database System of Flight reservations</h3>
+                    <p class="project-date">2022/03 - 2022/04</p>
+                    <p>🔗 <a href="https://github.com/jackwong1105/Database-System-of-Flight-reservations.git" target="_blank">GitHub Repository</a></p>
+                    <ul class="project-details">
+                        <li>Use SQLite to create Database System of Flight reservations</li>
+                        <li>To record confirmed passenger reservation everyday</li>
+                        <li>List the Special Assistance status of different passenger to provide advanced action,
+                            such as prepare one more seats for assistance dog, pay attention to
+                            passenger who have medical device
+                        </li>
+                    </ul>
+                </div>
+
+                    <!-- You can copy and paste the above 'project' div for each project you want to add -->
+
+
+                    <h2 style="color: #e21313;">Work History</h2>
+                    <h3>Research Assistant</h3>
+                    <p>HKAGExCUHKCSE 2024: Generative Music Programming</p>
+                    <p>2024 Summer</p>
+                    <p class="hidden">📄 <a href="#" target="_blank">Article 1</a></p>
+                    <p class="hidden">📄 <a href="#" target="_blank">Article 2</a></p>
+
+                    <h3>Student Helper</h3>
+                    <p>New Asia College - The Chinese University of Hong Kong</p>
+                    <p>2022/09 - Present</p>
+
+                    <h3>Student Tutor</h3>
+                    <p>Tseung Kwan O Sion Church & Yan Chai Hospital Lan Chi Pat Memorial Secondary School</p>
+                    <p>2020/01 - Present</p>
+
+                    <h2 style="color: #da7b07;">Summer Programs</h2>
+                    <h3>Stellenbosch University Summer Schools</h3>
+                    <p>Stellenbosch University, Stellenbosch, South Africa</p>
+                    <p>2024 Summer</p>
+                    <ul>
+                        <li>South Africa's Political History</li>
+                        <li>Biodiversity in the Western Cape</li>
+                        <li>Understanding HIV in South Africa</li>
+                    </ul>
+
+                    <h3>UCL Summer School</h3>
+                    <p>University College London, London, UK</p>
+                    <p>2023 Summer</p>
+                    <ul>
+                        <li>Astrophysics and Cosmology</li>
+                        <li>Public Art, Graffiti and the Right to the City</li>
+                    </ul>
+
+                </section>
+
+                <section class="section" id="awards-and-scholarships">
+                    <h2 style="color: #06be00;">Awards and Scholarships</h2>
+                    <ul>
+                        <li>
+                            <strong>New Asia College - Dr. Wong Shek Hung Memorial Scholarship</strong>
+                            <span class="award-date">2024/09</span>
+                        </li>
+                        <li>
+                            <strong>New Asia College - Sages Scholarship</strong>
+                            <span class="award-date">2023/09</span>
+                        </li>
+                        <li>
+                            <strong>CUHK - Faculty of Engineering Admission Scholarship 2022</strong>
+                            <span class="award-date">2022/10</span>
+                        </li>
+                        <li>
+                            <strong>HKU SPACE Community College Scholarship</strong>
+                            <span class="award-date">2021/11</span>
+                        </li>
+                        <li>
+                            <strong>HKU SPACE Community College Students on Principal's Honours List</strong>
+                            <span class="award-date">2021/10</span>
+                        </li>
+                        <li>
+                            <strong>HKU SPACE Community College Admission Scholarship</strong>
+                            <span class="award-date">2019/07</span>
+                        </li>
+                    </ul>
+                </section>
+
+                
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
