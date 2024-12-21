@@ -70,14 +70,61 @@
                 grid-template-columns: 1fr;
             }
         }
+        .nav-bar {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-bar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-bar li {
+            margin: 0 15px;
+        }
+        
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-bar a:hover {
+            background-color: #34495e;
+            border-radius: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar li {
+                margin: 5px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Po Hing Wong</h1>
-            <p class="hidden">Software Developer</p>
         </header>
+
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#education">Education History</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#work-history">Work History</a></li>
+                <li><a href="#summer-programs">Summer Programs</a></li>
+                <li><a href="#awards-and-scholarships">Awards and Scholarships</a></li>
+            </ul>
+        </nav>
 
         <div class="grid">
             <div class="contact-info">
@@ -118,7 +165,7 @@
                     <p>CHENG CHEK CHEE SECONDARY SCHOOL, 2013 - 2019</p>
 
                 <div class="project">
-                    <h2 style="color: #cc3300;">Projects</h2>
+                    <h2 style="color: #cc3300;" id="projects">Projects</h2>
 
                     <h3>Weather Prediction of Hong Kong Observatory</h3>
                     <p class="project-date">2024/11 - 2024/12</p>
@@ -206,7 +253,7 @@
                     <!-- You can copy and paste the above 'project' div for each project you want to add -->
 
 
-                    <h2 style="color: #e21313;">Work History</h2>
+                    <h2 style="color: #e21313;" id="work-history">Work History</h2>
                     <h3>Research Assistant</h3>
                     <p>HKAGExCUHKCSE 2024: Generative Music Programming</p>
                     <p>2024 Summer</p>
@@ -221,7 +268,7 @@
                     <p>Tseung Kwan O Sion Church & Yan Chai Hospital Lan Chi Pat Memorial Secondary School</p>
                     <p>2020/01 - Present</p>
 
-                    <h2 style="color: #da7b07;">Summer Programs</h2>
+                    <h2 style="color: #da7b07;" id="summer-programs">Summer Programs</h2>
                     <h3>Stellenbosch University Summer Schools</h3>
                     <p>Stellenbosch University, Stellenbosch, South Africa</p>
                     <p>2024 Summer</p>
