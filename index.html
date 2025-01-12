@@ -108,6 +108,29 @@
                 margin: 5px;
             }
         }
+
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        .dark-mode .container {
+            background-color: #2d2d2d;
+        }
+        .dark-mode h2 {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -323,5 +346,37 @@
             </div>
         </div>
     </div>
+
+    <button class="theme-toggle" onclick="toggleDarkMode()">🌓 Dark Mode</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Add animation to skills
+            const skills = document.querySelectorAll('.skills li');
+            skills.forEach(skill => {
+                skill.addEventListener('mouseover', () => {
+                    skill.style.transform = 'scale(1.1)';
+                    skill.style.transition = 'transform 0.3s';
+                });
+                skill.addEventListener('mouseout', () => {
+                    skill.style.transform = 'scale(1)';
+                });
+            });
+        });
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
