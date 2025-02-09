@@ -131,52 +131,69 @@
             border: none;
             cursor: pointer;
         }
+
+        .content-section {
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('education')">Education History</a></li>
+            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#" onclick="showSection('work-history')">Work History</a></li>
+            <li><a href="#" onclick="showSection('summer-programs')">Summer Programs</a></li>
+            <li><a href="#" onclick="showSection('awards')">Awards and Scholarships</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <header>
             <h1>Wong Po Hing</h1>
         </header>
 
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="#education">Education History</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#work-history">Work History</a></li>
-                <li><a href="#summer-programs">Summer Programs</a></li>
-                <li><a href="#awards-and-scholarships">Awards and Scholarships</a></li>
-            </ul>
-        </nav>
+        <div id="home" class="content-section">
+            <div class="grid">
+                <div class="contact-info">
+                    <section class="section" id="contact">
+                        <h2>Contact Information</h2>
+                        <p>📧 <a href="mailto:pohingwong1105@gmail.com">pohingwong1105@gmail.com</a></p>
+                        <p>📞 (852) 5571 5066</p>
+                        <p class="hidden">🔗 <a href="https://www.linkedin.com/in/pohingwong/" target="_blank">linkedin.com/in/pohingwong</a></p>
+                        <p>🔗<a href="https://github.com/jackwong1105" target="_blank">github.com/jackwong1105</a></p>
+                    </section>
 
-        <div class="grid">
-            <div class="contact-info">
-                <section class="section" id="contact">
-                    <h2>Contact Information</h2>
-                    <p>📧 <a href="mailto:pohingwong1105@gmail.com">pohingwong1105@gmail.com</a></p>
-                    <p>📞 (852) 5571 5066</p>
-                    <p class="hidden">🔗 <a href="https://www.linkedin.com/in/pohingwong/" target="_blank">linkedin.com/in/pohingwong</a></p>
-                    <p>🔗<a href="https://github.com/jackwong1105" target="_blank">github.com/jackwong1105</a></p>
-                </section>
-
-                <section class="section skills" id="skills">
-                    <h2>Skills</h2>
-                    <ul>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>C++</li>
-                        <li>R</li>
-                        <li>SQL</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                    </ul>
-                </section>
+                    <section class="section skills" id="skills">
+                        <h2>Skills</h2>
+                        <ul>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>R</li>
+                            <li>SQL</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </section>
+                </div>
             </div>
+        </div>
 
-            <div class="main-content">
-                <section class="section" id="education">
-                    <h2 style="color: #0066cc;">Education History</h2>
+        <!-- Education Section -->
+        <div id="education" class="content-section" style="display: none;">
+            <h2 style="color: #0066cc;">Education History</h2>
                     <h3>Bachelor of Science in Computer Science</h3>
                     <p>The Chinese University of Hong Kong, New Asia College, 2022-present</p>
                     <h3>Associate Degree of Engineering in Computer Science</h3>
@@ -186,11 +203,12 @@
                     <p>HKU School of Professional and Continuing Education, 2019 - 2020</p>
                     <h3>High School Diploma</h3>
                     <p>CHENG CHEK CHEE SECONDARY SCHOOL, 2013 - 2019</p>
+        </div>
 
-                <div class="project">
-                    <h2 style="color: #cc3300;" id="projects">Projects</h2>
-
-                    <h3>Real-Time Weather Forecasting</h3>
+        <!-- Projects Section -->
+        <div id="projects" class="content-section" style="display: none;">
+            <h2 style="color: #cc3300;" id="projects">Projects</h2>
+            <h3>Real-Time Weather Forecasting</h3>
                     <p class="project-date">2024/11 - 2025/02</p>
                     <p class="project-description">This project is predicts real-time weather conditions using machine learning techniques</p>
                     <p>🔗 <a href="https://github.com/jackwong1105/Real-TimeWeatherForecastingWebsite.git" target="_blank">GitHub Repository</a></p>
@@ -203,7 +221,6 @@
                         <li> Displayed weather trends through graphs and dashboards for better analysis </li>
                         <li> Integrated APIs to fetch real-time data, making predictions dynamic and up-to-date</li>
                     </ul>
-
                     <h3>Weather Prediction of Hong Kong Observatory</h3>
                     <p class="project-date">2024/11 - 2024/12</p>
                     <p class="project-description">This project is a guided walkthrough focused on predicting temperatures (Maximum, Mean and Minimum) using historical weather data. </p>
@@ -219,8 +236,6 @@
                             Graph of the prediction Maximum, Mean and Minimum temperatures and the actual temperatures between 2024/07/01 - 2024/11/01 in model
                         </p>
                     </ul>
-
-
                     <h3>Weather Prediction of John F. Kennedy International Airport</h3>
                     <p class="project-date">2024/10 - 2024/11</p>
                     <p class="project-description">This project is a guided walkthrough focused on predicting temperatures using historical weather data. </p>
@@ -234,8 +249,6 @@
                             Graph of the prediction maximum temperatures and the actual maximum temperatures between 2024/07/01 - 2024/11/01 in model
                         </p>
                     </ul>
-
-
                     <h3>Notakto</h3>
                     <p class="project-date">2023/02 - 2023/04</p>
                     <p class="project-description">Game played by 2 players on multiple a 3x3 games board</p>
@@ -244,7 +257,6 @@
                         <li> Using C to construct two Game Board </li>
                         <li> Divide two mode : Human VS Human, Human VS Computer Player</li>
                     </ul>
-
                     <h3>Point of Sale System for Restaurant</h3>
                     <p class="project-date">2021/09 - 2022/04</p>
                     <p class="project-description">Final Year Group project on HKU SPACE</p>
@@ -255,7 +267,6 @@
                         <li>Maven to manager the project and dependency setting</li>
                         <li>Draw.io to design different diagrams</li>
                     </ul>
-
                     <h3>Personal Portfolio</h3>
                     <p class="project-date">2021/10 - 2021/11</p>
                     <p>🔗 <a href="https://github.com/jackwong1105/Personal-Portfolio-of-Internet-Programming-Webpage-Programming-Design-Assignment-01-" target="_blank">GitHub Repository</a></p>
@@ -264,7 +275,6 @@
                         <li>with variety of text, graphics, sound and animations</li>
                         <li>consist three pages: Home page(index.html), Personal portfolio page(portfolio.html) and Hobbies page (hobbies.html)</li>
                     </ul>
-
                     <h3>Business Website of Baby Product</h3>
                     <p class="project-date">2021/11 - 2021/12</p>
                     <p>🔗 <a href="https://github.com/jackwong1105/Business-Website-of-Baby-Product" target="_blank">GitHub Repository</a></p>
@@ -273,7 +283,6 @@
                         <li>with Top Navigational Bar, Live Clock</li>
                         <li>consist two games: Tower of Hanoi and Play Snake Game</li>
                     </ul>
-
                     <h3>Database System of Flight reservations</h3>
                     <p class="project-date">2022/03 - 2022/04</p>
                     <p>🔗 <a href="https://github.com/jackwong1105/Database-System-of-Flight-reservations.git" target="_blank">GitHub Repository</a></p>
@@ -285,33 +294,35 @@
                             passenger who have medical device
                         </li>
                     </ul>
-                </div>
+            <!-- Add your projects content here -->
+        </div>
 
-                    <!-- You can copy and paste the above 'project' div for each project you want to add -->
-
-
-                    <h2 style="color: #e21313;" id="work-history">Work History</h2>
-
-                    <h3>VR developer of CUHK Information Technology Service Centre </h3>
+        <!-- Work History Section -->
+        <div id="work-history" class="content-section" style="display: none;">
+            <h2 style="color: #e21313;" id="work-history">Work History</h2>
+            <h3>VR developer of CUHK Information Technology Service Centre </h3>
                     <p>VR educational game development</p>
                     <p>2025/01 - Present</p>
-
                     <h3>Research Assistant</h3>
                     <p>HKAGExCUHKCSE 2024: Generative Music Programming</p>
                     <p>2024/08</p>
                     <p class="hidden">📄 <a href="#" target="_blank">Article 1</a></p>
                     <p class="hidden">📄 <a href="#" target="_blank">Article 2</a></p>
-
                     <h3>Student Helper</h3>
                     <p>New Asia College - The Chinese University of Hong Kong</p>
                     <p>2022/09 - Present</p>
-
                     <h3>Student Tutor</h3>
                     <p>Tseung Kwan O Sion Church & Yan Chai Hospital Lan Chi Pat Memorial Secondary School</p>
                     <p>2020/01 - Present</p>
 
-                    <h2 style="color: #da7b07;" id="summer-programs">Summer Programs</h2>
-                    <h3>Stellenbosch University Summer Schools</h3>
+
+            <!-- Add your work history content here -->
+        </div>
+
+        <!-- Summer Programs Section -->
+        <div id="summer-programs" class="content-section" style="display: none;">
+            <h2 style="color: #da7b07;" id="summer-programs">Summer Programs</h2>
+            <h3>Stellenbosch University Summer Schools</h3>
                     <p>Stellenbosch University, Stellenbosch, South Africa</p>
                     <p>2024 Summer</p>
                     <ul>
@@ -319,7 +330,6 @@
                         <li>Biodiversity in the Western Cape</li>
                         <li>Understanding HIV in South Africa</li>
                     </ul>
-
                     <h3>UCL Summer School</h3>
                     <p>University College London, London, UK</p>
                     <p>2023 Summer</p>
@@ -328,10 +338,13 @@
                         <li>Public Art, Graffiti and the Right to the City</li>
                     </ul>
 
-                </section>
 
-                <section class="section" id="awards-and-scholarships">
-                    <h2 style="color: #06be00;">Awards and Scholarships</h2>
+            <!-- Add your summer programs content here -->
+        </div>
+
+        <!-- Awards Section -->
+        <div id="awards" class="content-section" style="display: none;">
+            <h2 style="color: #06be00;">Awards and Scholarships</h2>
                     <ul>
                         <li>
                             <strong>New Asia College - Dr. Wong Shek Hung Memorial Scholarship</strong>
@@ -358,39 +371,27 @@
                             <span class="award-date">2019/07</span>
                         </li>
                     </ul>
-                </section>
-
-                
-
-            </div>
+            <!-- Add your awards content here -->
         </div>
     </div>
 
     <button class="theme-toggle" onclick="toggleDarkMode()">🌓 Dark Mode</button>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.getElementsByClassName('content-section');
+            for (let section of sections) {
+                section.style.display = 'none';
+            }
+            
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
 
-            // Add animation to skills
-            const skills = document.querySelectorAll('.skills li');
-            skills.forEach(skill => {
-                skill.addEventListener('mouseover', () => {
-                    skill.style.transform = 'scale(1.1)';
-                    skill.style.transition = 'transform 0.3s';
-                });
-                skill.addEventListener('mouseout', () => {
-                    skill.style.transform = 'scale(1)';
-                });
-            });
+        // Show home section by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home');
         });
 
         function toggleDarkMode() {
